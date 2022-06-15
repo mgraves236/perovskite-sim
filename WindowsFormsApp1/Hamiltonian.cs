@@ -41,7 +41,7 @@ namespace WindowsFormsApp1
 		public Hamiltonian(Material Material, double kx, double ky, double kz)
 		{
 
-			this.gammaV = new Complex(1 / Globals.mh - Material.Ep / 3 * (2 / Material.Eg + 1 / (Material.Eg + Material.delta)), 0);
+			this.gammaV = new Complex(1 / (Material.mh * Globals.mh) - Material.Ep / 3 * (2 / Material.Eg + 1 / (Material.Eg + Material.delta)), 0);
 
 			this.gamma1 = new Complex(Material.gamma1- 1 / 3 * Material.Ep / Material.Eg, 0);
 

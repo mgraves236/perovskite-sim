@@ -154,8 +154,8 @@ namespace WindowsFormsApp1
                 var matrix = hamiltonian.CreateMatrix();
 				MathNet.Numerics.LinearAlgebra.Complex.Vector DiagonalMatrix = hamiltonian.SolveMatrix(matrix);
 
-                chart1.Series["VB"].Points.AddXY(point, -DiagonalMatrix[0].Real / Globals.eVtoH);
-                chart1.Series["VB"].Points.AddXY(point, -DiagonalMatrix[1].Real / Globals.eVtoH);
+                chart1.Series["VB"].Points.AddXY(point, DiagonalMatrix[0].Real / Globals.eVtoH);
+                chart1.Series["VB"].Points.AddXY(point, DiagonalMatrix[1].Real / Globals.eVtoH);
                 chart1.Series["CS"].Points.AddXY(point, DiagonalMatrix[2].Real / Globals.eVtoH);
                 chart1.Series["CS"].Points.AddXY(point, DiagonalMatrix[3].Real / Globals.eVtoH);
                 chart1.Series["CH"].Points.AddXY(point, DiagonalMatrix[4].Real / Globals.eVtoH);
@@ -183,8 +183,8 @@ namespace WindowsFormsApp1
                 var matrix = hamiltonian.CreateMatrix();
                 MathNet.Numerics.LinearAlgebra.Complex.Vector DiagonalMatrix = hamiltonian.SolveMatrix(matrix);
 
-				chart1.Series["VB"].Points.AddXY(point, -DiagonalMatrix[0].Real / Globals.eVtoH);
-				chart1.Series["VB"].Points.AddXY(point, -DiagonalMatrix[1].Real / Globals.eVtoH);
+				chart1.Series["VB"].Points.AddXY(point, DiagonalMatrix[0].Real / Globals.eVtoH);
+				chart1.Series["VB"].Points.AddXY(point, DiagonalMatrix[1].Real / Globals.eVtoH);
 				chart1.Series["CS"].Points.AddXY(point, DiagonalMatrix[2].Real / Globals.eVtoH);
 				chart1.Series["CS"].Points.AddXY(point, DiagonalMatrix[3].Real / Globals.eVtoH);
 				chart1.Series["CH"].Points.AddXY(point, DiagonalMatrix[4].Real / Globals.eVtoH);

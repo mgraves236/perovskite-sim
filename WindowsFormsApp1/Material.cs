@@ -94,11 +94,11 @@ namespace WindowsFormsApp1
 
 		public double AddStrain(double eps_xx)
 		{
-			double aS = eps_xx * this.aL + this.aL;
+			double aS = (eps_xx * this.aL + this.aL);
 
 			double deltaECH = 2 * this.aC * (1 - this.C12 / this.C11) * eps_xx;
 			double deltaEVH = 2 * this.aV * (1 - this.C12 / this.C11) * eps_xx;
-			double deltaES = this.b * (1 + this.C12 / this.C11) * eps_xx;
+			double deltaES = this.b * (1 + 2 * this.C12 / this.C11) * eps_xx;
 
 			this.VB = this.VB + deltaEVH;
 			this.CS = this.CS + deltaECH;
